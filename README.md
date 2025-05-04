@@ -18,16 +18,15 @@ The dataset is provided by Walmart and includes:
 
 ## Modeling Approaches
 ###  LightGBM
-LightGBM models are trained per product category (FOODS, HOBBIES, HOUSEHOLD). A gradient boosting framework that provides fast, high-accuracy results. 
+LightGBM models are trained per product category. A gradient boosting framework that provides fast, high-accuracy results. 
 
-### LSTM
-LSTM (Best Performing Model)
+### LSTM (Best Performing Model)
 LSTM models are built per store to reduce computation load and better capture store-specific temporal dynamics. The model learns from a 28-day input sequence to predict 56 days ahead using a sliding window mechanism.
 
 LSTM Performance: Public Score: 1.37348 / Private Score: 1.50406
 
 ### GRU
-GRU models are trained per product category (FOODS, HOBBIES, HOUSEHOLD). GRU offers faster training with fewer parameters compared to LSTM and is effective in capturing short-term seasonality.
+GRU models are trained per product category. GRU offers faster training with fewer parameters compared to LSTM and is effective in capturing short-term seasonality.
 
 For more details about model hyper-parameters and the rationale behind feature engineering, please refer to the [Walmart Sales Forecast_Write-up.pdf](https://github.com/yachinhsu2963/Walmart_sales_forecasting/blob/main/Walmart%20Sales%20Forecast_Write-up.pdf).
 
