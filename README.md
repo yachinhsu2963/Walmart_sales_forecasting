@@ -29,7 +29,7 @@ LSTM Performance: Public Score: 1.37348 / Private Score: 1.50406
 ### GRU
 GRU models are trained per product category (FOODS, HOBBIES, HOUSEHOLD). GRU offers faster training with fewer parameters compared to LSTM and is effective in capturing short-term seasonality.
 
-For more details about model hyper-parameters and the rationale behind feature engineering, please refer to the [Walmart_Sales_Forecast_Write-up.pdf](./Walmart_Sales_Forecast_Write-up.pdf).
+For more details about model hyper-parameters and the rationale behind feature engineering, please refer to the [Walmart Sales Forecast_Write-up.pdf](https://github.com/yachinhsu2963/Walmart_sales_forecasting/blob/main/Walmart%20Sales%20Forecast_Write-up.pdf).
 
 ## Insights & Recommendation
 LSTM models effectively capture complex sequential patterns, incorporating promotion and holiday effects.
