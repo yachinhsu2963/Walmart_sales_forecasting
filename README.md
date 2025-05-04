@@ -18,19 +18,23 @@ The dataset is provided by Walmart and includes:
 
 ## Modeling Approaches
 ###  LightGBM
-A gradient boosting framework that provides fast, high-accuracy results. Categorical features are one-hot encoded and continuous variables are normalized. Features such as lag sales, moving averages, and event flags are engineered to enrich model learning.
+LightGBM models are trained per product category (FOODS, HOBBIES, HOUSEHOLD). A gradient boosting framework that provides fast, high-accuracy results. 
 
 ### LSTM
 LSTM (Best Performing Model)
 LSTM models are built per store to reduce computation load and better capture store-specific temporal dynamics. The model learns from a 28-day input sequence to predict 56 days ahead using a sliding window mechanism.
+
 LSTM Performance: Public Score: 1.37348 / Private Score: 1.50406
 
 ### GRU
-Gated Recurrent Unit (GRU) models are trained per product category (FOODS, HOBBIES, HOUSEHOLD). GRU offers faster training with fewer parameters compared to LSTM and is effective in capturing short-term seasonality.
+GRU models are trained per product category (FOODS, HOBBIES, HOUSEHOLD). GRU offers faster training with fewer parameters compared to LSTM and is effective in capturing short-term seasonality.
+
+For more details about model hyper-parameters and the rationale behind feature engineering, please refer to the [Walmart_Sales_Forecast_Write-up.pdf](./Walmart_Sales_Forecast_Write-up.pdf).
 
 ## Insights & Recommendation
 LSTM models effectively capture complex sequential patterns, incorporating promotion and holiday effects.
 Item-level forecasts allow Walmart to tailor inventory plans. For example:
 - Store CA_1 shows high demand in Week 2
 - Store WI_1 shows increased sales on weekends
+
 Moving forward, developing an automated forecasting pipeline can enable dynamic inventory adjustment and reduce stockouts or overstocking.
